@@ -1,4 +1,4 @@
-rootProject.name = 'iniexpo'
+rootProject.name = 'mengexpo'
 
 apply from: '../node_modules/react-native-unimodules/gradle.groovy'
 includeUnimodulesProjects()
