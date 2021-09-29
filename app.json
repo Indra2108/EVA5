@@ -1,11 +1,4 @@
 {
-  "expo": {
-    "name": "mengexpo",
-    "slug": "mengexpo",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
-  },
-  "name": "mengexpo"
+  "name": "indra",
+  "displayName": "indra"
 }
