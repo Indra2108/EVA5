@@ -19,12 +19,11 @@ import joji from '../assets/joji.jpeg';
 export default class MainMenu extends Component {
   render() {
     return (
-      <ScrollView>
+      
         <View
           style={{
             flex: 1,
             padding: 10,
-            backgroundColor: 'gray',
           }}>
           <View>
             <Text>DISCOVER</Text>
@@ -53,16 +52,62 @@ export default class MainMenu extends Component {
                 padding: 10,
                 alignItems: 'center',
                 width: '35%',
-                height: '5%',
+                height: '25%',
                 borderRadius: 20,
               }}>
               <Image source={cari} style={gaya.lup} />
               <TextInput style={gaya.searchcari} placeholder="Search" />
             </View>
           </View>
-          <TouchableOpacity>
+          <KotakUngu />
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}>
+            <Text style={{ color: '#170942', fontSize: 25 }}>
+              Events Categories
+            </Text>
+            <Image source={menu} style={gaya.hanu} />
+          </View>
+          <ScrollView horizontal>
             <View
               style={{
+                flexDirection: 'row',
+                marginTop: 10,
+              }}>
+              <KotakPutih gambar={event} judul="Event" />
+              <KotakPutih gambar={event} judul="Technology" />
+              <KotakPutih gambar={event} judul="Go Green" />
+            </View>
+          </ScrollView>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              marginTop: 15,
+            }}>
+            <Text style={{ color: '#170942', fontSize: 25 }}>
+              Upcoming Events
+            </Text>
+            <Image source={menu} style={gaya.hanu} />
+          </View>
+          <TouchableOpacity>
+            <KotakHitam satu={joji} dua={joji} tiga={joji} />
+          </TouchableOpacity>
+        </View>
+      
+    );
+  }
+}
+
+const KotakUngu = () => {
+  return (
+    <TouchableOpacity>
+      <View
+        style={{
                 flex: 1,
                 flexDirection: 'row',
                 backgroundColor: '#00083a',
@@ -106,48 +151,7 @@ export default class MainMenu extends Component {
               </View>
             </View>
           </TouchableOpacity>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}>
-            <Text style={{ color: '#170942', fontSize: 25 }}>
-              Events Categories
-            </Text>
-            <Image source={menu} style={gaya.hanu} />
-          </View>
-          <ScrollView horizontal>
-            <View
-              style={{
-                flexDirection: 'row',
-                marginTop: 10,
-                backgroundColor: 'grey',
-              }}>
-              <KotakPutih gambar={event} judul="Event" />
-              <KotakPutih gambar={event} judul="Technology" />
-              <KotakPutih gambar={event} judul="Go Green" />
-            </View>
-          </ScrollView>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              marginTop: 15,
-            }}>
-            <Text style={{ color: '#170942', fontSize: 25 }}>
-              Upcoming Events
-            </Text>
-            <Image source={menu} style={gaya.hanu} />
-          </View>
-          <TouchableOpacity>
-            <KotakHitam satu={joji} dua={joji} tiga={joji} />
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
-    );
-  }
+  )
 }
 
 const KotakPutih = (prop) => {
@@ -196,7 +200,7 @@ const KotakHitam = (prop) => {
             backgroundColor: '#399d29',
             padding: 5,
             width: 70,
-            height: 20,
+            height: 25,
             justifyContent: 'center',
             borderTopLeftRadius: 6,
             borderBottomLeftRadius: 6,
@@ -276,7 +280,7 @@ const gaya = StyleSheet.create({
   mengjoji: {
     width: 40,
     height: 40,
-    borderRadius: '50%',
+    borderRadius: 20,
     marginLeft: -20,
   },
 });

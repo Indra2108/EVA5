@@ -10,7 +10,7 @@ export default class App extends Component {
       <ScrollView>
         <View>
           <MainMenu />
-         
+          {/* <MengLogin /> */}
         </View>
       </ScrollView>
     );

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   View,
   Text,
@@ -12,20 +12,20 @@ import duduk from '../assets/orangduduk.png';
 export default class MengLogin extends Component {
   render() {
     return (
-      <View style={{ flex: 1, padding: 15 }}>
+      <View style={{flex: 1, padding: 15}}>
         <Image source={duduk} style={style.gambar} />
-        <Text style={{ color: '#190844', fontWeight: 'bold', fontSize: 35 }}>
+        <Text style={{color: '#190844', fontWeight: 'bold', fontSize: 35}}>
           Sign in
         </Text>
         <View
-          style={{ justifyContent: 'center', marginVertical: 20, padding: 10 }}>
+          style={{justifyContent: 'center', marginVertical: 20, padding: 10}}>
           <View>
-            <TextInput style={{ height: 20 }} placeholder="Email address" />
-            <View style={{ backgroundColor: 'black', height: 1 }} />
+            <TextInput placeholder="Email address" />
+            <View style={{backgroundColor: 'black', height: 1}} />
           </View>
-          <View style={{ marginTop: 30 }}>
-            <TextInput style={{ height: 20 }} placeholder="Password" />
-            <View style={{ backgroundColor: 'black', height: 1 }} />
+          <View style={{marginTop: 30}}>
+            <TextInput placeholder="Password" />
+            <View style={{backgroundColor: 'black', height: 1}} />
           </View>
         </View>
         <TouchableOpacity
@@ -36,8 +36,9 @@ export default class MengLogin extends Component {
             alignSelf: 'center',
             alignItems: 'center',
             borderRadius: 5,
+            marginTop: '10%'
           }}>
-          <Text style={{ color: 'white', fontWeight: 'bold' }}>Continue</Text>
+          <Text style={{color: 'white', fontWeight: 'bold'}}>Continue</Text>
         </TouchableOpacity>
         <View
           style={{
@@ -48,12 +49,12 @@ export default class MengLogin extends Component {
             justifyContent: 'center',
           }}>
           <View style={{}}>
-            <Text style={{ textAlign: 'center', color: '#808080' }}>
+            <Text style={{textAlign: 'center', color: '#808080'}}>
               New user?
             </Text>
           </View>
           <TouchableOpacity>
-            <Text style={{ fontWeight: 'bold', color: '#68559d' }}>
+            <Text style={{fontWeight: 'bold', color: '#68559d'}}>
               {' '}
               Create account
             </Text>
